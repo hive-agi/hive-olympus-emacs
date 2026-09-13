@@ -1,0 +1,7 @@
+{:project-id "hive-olympus-emacs"
+ :parent "hive"
+ :description "Olympus projected into Emacs: a manifest-only hive-olympus harness brick over hive.emacs's eval port"
+ :license "MIT"
+ :language :clojure
+ :tags [:hive :olympus :addon :vessel :emacs :elisp :foss]
+ :carto {:source-roots ["resources" "test" "dev"]}}

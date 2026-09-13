@@ -1,0 +1,15 @@
+{:addon/id "hive.olympus.emacs"
+ :addon/kind :addon
+ :addon/type :native
+ :addon/version "0.1.0-SNAPSHOT"
+ :addon/init-ns "hive-olympus.harness"
+ :addon/init-fn "addon-ctor"
+ :addon/config {:olympus/host "hive.emacs"
+                :olympus/target-resolver hive-olympus.harness/eval-port-target
+                :olympus/eval-fn hive-emacs.client/eval-elisp!
+                :olympus/dialect :elisp}
+ :addon/capabilities #{:olympus-presenter :health-reporting}
+ :addon/dependencies #{"hive.olympus" "hive.emacs"}
+ :addon/description "Olympus in Emacs: the hive.olympus grid delivered as one *hive:olympus/tab-N* buffer per tab, lowered to elisp by hive-vessel and evaluated through hive.emacs's eval port"
+ :addon/maturity :experimental
+ :addon/trust-class :foss}
