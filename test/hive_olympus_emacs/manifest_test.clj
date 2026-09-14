@@ -11,7 +11,8 @@
             [clojure.test :refer [deftest is testing]]
             [hive-addon.mount :as mount]
             [hive-addon.mount.port :as mount-port]
-            [hive-addon.protocol :as addon]))
+            [hive-addon.protocol :as addon]
+            [hive-olympus.demo :as demo]))
 
 (defrecord StubAddon [id hook-map]
   addon/IAddon
@@ -58,13 +59,9 @@
 (def roster-size (atom 0))
 
 (defn stub-roster
-  "N agents cycling through every status, N read from roster-size."
+  "The core's demo roster, N read from roster-size."
   []
-  (mapv (fn [i]
-          {:agent/id (str "demo-" i)
-           :agent/name (str "demo-" i)
-           :agent/status (nth [:working :blocked :error :idle] (mod i 4))})
-        (range 1 (inc @roster-size))))
+  (demo/roster @roster-size))
 
 (defn manifest [file]
   (some-> (io/resource (str "META-INF/hive-addons/" file)) slurp edn/read-string))
