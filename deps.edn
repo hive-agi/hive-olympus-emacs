@@ -5,9 +5,9 @@
  ;; hive-vessel is a runtime dependency here: the eval-port route lowers
  ;; :ui/* ops through hive-vessel's standard registry, and hive.emacs does
  ;; not bring hive-vessel onto the classpath.
- :deps {org.clojure/clojure {:mvn/version "1.12.5"}
-        io.github.hive-agi/hive-olympus {:mvn/version "0.1.2"}
-        io.github.hive-agi/hive-vessel {:mvn/version "0.1.2"}}
+ :deps {org.clojure/clojure {:mvn/version "1.12.6"}
+        io.github.hive-agi/hive-olympus {:mvn/version "0.1.4"}
+        io.github.hive-agi/hive-vessel {:mvn/version "0.1.4"}}
 
  :aliases
  {:test {:extra-paths ["test"]
