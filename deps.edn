@@ -6,8 +6,8 @@
  ;; :ui/* ops through hive-vessel's standard registry, and hive.emacs does
  ;; not bring hive-vessel onto the classpath.
  :deps {org.clojure/clojure {:mvn/version "1.12.6"}
-        io.github.hive-agi/hive-olympus {:mvn/version "0.1.7"}
-        io.github.hive-agi/hive-vessel {:mvn/version "0.1.8"}}
+        io.github.hive-agi/hive-olympus {:mvn/version "0.1.9"}
+        io.github.hive-agi/hive-vessel {:mvn/version "0.1.11"}}
 
  :aliases
  {:test {:extra-paths ["test"]
