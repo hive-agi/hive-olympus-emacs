@@ -7,7 +7,7 @@
  ;; not bring hive-vessel onto the classpath.
  :deps {org.clojure/clojure {:mvn/version "1.12.6"}
         io.github.hive-agi/hive-olympus {:mvn/version "0.1.12"}
-        io.github.hive-agi/hive-vessel {:mvn/version "0.1.17"}}
+        io.github.hive-agi/hive-vessel {:mvn/version "0.1.18"}}
 
  :aliases
  {:test {:extra-paths ["test"]
